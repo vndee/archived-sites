@@ -1,0 +1,52 @@
+---
+layout: default
+pagination:
+  enabled: true
+  collection: posts
+  permalink: /page/:num/
+  per_page: 3
+  sort_field: date
+  sort_reverse: true
+  trail:
+    before: 1 # The number of links before the current page
+    after: 3  # The number of links after the current page
+---
+
+<div class="post">
+  <div class="header-bar">
+    <!-- <h1>{{ site.blog_name }}</h1> -->
+    <h5>{{ site.blog_description }}</h5>
+    <span style="font-weight: 400;">- Thế Lữ -</span><br>
+    <!-- <p style="text-align: left;">Mot vai ghi chep:</p> -->
+  </div>
+
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        {% assign m = post.date | date: "%-m" %}
+        <p class="post-meta">
+          {{ post.date | date: '%-d' }}
+          {% case m %}
+          {% when '1' %}tháng một,
+          {% when '2' %}tháng hai,
+          {% when '3' %}tháng ba,
+          {% when '4' %}tháng tư,
+          {% when '5' %}tháng năm,
+          {% when '6' %}tháng sáu,
+          {% when '7' %}tháng bảy,
+          {% when '8' %}tháng tám,
+          {% when '9' %}tháng chín,
+          {% when '10' %}tháng mười,
+          {% when '11' %}tháng mười một,
+          {% when '12' %}tháng mười hai,
+        {% endcase %} {{ post.date | date: '%Y' }}</p>
+        <p>{{ post.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% include pagination.html %}
+
+</div>
