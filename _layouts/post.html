@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+{% if page._styles %}
+<style type="text/css">
+  {{ page._styles }}
+</style>
+{% endif %}
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% assign m = page.date | date: "%-m" %}
+    <p class="post-meta">{{ page.date | date: '%-d' }}
+      {% case m %}
+      {% when '1' %}tháng một,
+      {% when '2' %}tháng hai,
+      {% when '3' %}tháng ba,
+      {% when '4' %}tháng tư,
+      {% when '5' %}tháng năm,
+      {% when '6' %}tháng sáu,
+      {% when '7' %}tháng bảy,
+      {% when '8' %}tháng tám,
+      {% when '9' %}tháng chín,
+      {% when '10' %}tháng mười,
+      {% when '11' %}tháng mười một,
+      {% when '12' %}tháng mười hai,
+    {% endcase %} {{ page.date | date: '%Y' }}</p>
+    <p class="post-meta">{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+  {% if site.disqus_shortname and page.comments %}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = '{{ site.disqus_shortname }}';
+      var disqus_identifier = '{{ page.id }}';
+      var disqus_title      = {{ page.title | jsonify }};
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  {% endif %}
+
+</div>
