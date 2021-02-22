@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Lambda Networks
-description: Modelling long-range interaction without attention.
+description: Modeling long-range interaction without attention.
 date: 2020-10-26
 comments: True
 
