@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Huỳnh Văn Duy | Lambda Networks</title>
+<meta name="description" content="a person who never made a mistake never tried anything new
+">
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.9/dist/shoelace/shoelace.css">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.9/dist/shoelace/shoelace.esm.js"></script>
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/blog/2020/lambdanetworks/">
+
+<!-- Theming-->
+
+
+    
+<!-- MathJax -->
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+    <script src="/assets/js/distillpub/template.v2.js"></script>
+    <script src="/assets/js/distillpub/transforms.v2.js"></script>
+    
+    <style type="text/css">
+      .fake-img {
+  background: #bbb;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+} .fake-img p {
+  font-family: monospace;
+  color: white;
+  text-align: left;
+  margin: 12px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+    </style>
+    
+  </head>
+
+  <d-front-matter>
+    <script async type="text/json">{
+      "title": "Lambda Networks",
+      "description": "Modeling long-range interaction without attention.",
+      "published": "2020-10-26 00:00:00 +0700",
+      "authors": [
+        
+        {
+          "author": "Duy V. Huynh",
+          "authorURL": "vndee.github.io",
+          "affiliations": [
+            {
+              "name": "vndee.github.io",
+              "url": ""
+            }
+          ]
+        }
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="/">
+        Huỳnh Văn  <span class="font-weight-bold">Duy</span>
+      </a>
+      
+      <!-- Navbar Toogle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              trang chủ
+              
+            </a>
+          </li>
+          
+          <!-- Blog -->
+          <li class="nav-item active">
+            <a class="nav-link" href="/blog/">
+              bài viết
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                công bố
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                dự án
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/archieve/">
+                lưu trữ
+                
+              </a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/assets/pdf/cv.pdf" target="_blank">cv</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="post distill">
+
+      <d-title>
+        <h1>Lambda Networks</h1>
+        <p>Modeling long-range interaction without attention.</p>
+      </d-title>
+
+      <d-byline></d-byline>
+
+      <d-article>
+        <p><strong>Lambda Network</strong><d-cite key="anonymous2021lambdanetworks"></d-cite> là kiến trúc Neural Network mới nhất (tính tới thời điểm viết bài <d-footnote>Paper của Lambda Network đang trong quá trình double-blind open peer review cho hội nghị ICLR 2021.</d-footnote>) đạt SOTA trên tập dữ liệu ImageNet. Các tác giả đề xuất <strong>lambda layer</strong> có khả năng trích xuất được các thông tin phụ thuộc xa (long-range dependency) trong nhiều trường hợp như global, local và mask context. Những thông tin lambda layer có thể trích xuất được bao gồm cả tương quan về tính chất lẫn tương quan về vị trí <d-footnote>Content-based và position-based.</d-footnote>. Điểm đặc biệt là mô hình này gọn nhẹ và nhanh hơn nhiều lần so với các mô hình <strong>self-attention</strong> và <strong>CNN</strong> thông thường. Vậy có điều gì đặc biệt trong mô hình này so với các kiến trúc khác hiện nay.</p>
+
+<h2 id="attention-networks">Attention Networks</h2>
+
+<p>Trước khi tìm hiểu về <strong>Lambda Network</strong>, trước tiên chúng ta hãy nhìn lại một chút về <em>attention</em>, xương sống của cuộc cách mạng <strong>Transformer</strong>. Khai thác thông tin phụ thuộc xa là một trong những vấn đề nan giải của Machine Learning nói chung và Deep Learning nói riêng. Có thể thấy rằng những mô hình truyền thống như RNN, CNN đều cố gắng để khác thác sự tương quan giữa các thành phần của dữ liệu. Điều khiến RNN và các biến thể (LSTM, GRU,..) trở thành tiêu chuẩn cho các mô hình xử lý ngôn ngữ tự nhiên, còn CNN thường dùng cho thị giác máy tính là vì đặc trưng dữ liệu thích hợp với mô hình nào hơn mà thôi. Trong thực tế, CNN vẫn có thể dùng cho các bài toán về ngôn ngữ rất tốt, đặc biệt là các mô hình TextCNN<d-cite key="kim2014"></d-cite>, CharCNN<d-cite key="zhang2015character"></d-cite>. Mặc khác, ở chiều ngược lại sẽ là khá khó khăn về vấn đề tính toán nếu xem mỗi bức ảnh là một chuỗi các pixel liền kề nhau để áp dụng mô cho những mô hình RNN truyền thống. Mặc khác, học biểu diễn thông qua mạng CNN có vẻ có mức độ phân cấp tốt hơn khi qua mỗi tầng thông tin được tổng hợp sẽ đi từ mức độ local context tới global context. Trong khi đó, các mạng hồi quy tổng hợp thông tin theo một trục nhất định của miền dữ liệu (thường là time-step), kiểu mô hình đặc biệt hiệu quả cho các bài toán <em>sequence-to-sequence</em>. Tuy nhiên có hai vấn đề rất lớn đối với các mạng hồi quy đó là vanishing gradient<d-footnote>Dù có nhiều cải tiến nhưng cũng không thể giải quyết triệt để vấn đề này.</d-footnote> và hiệu quả tính toán<d-footnote>Do tính chất của mạng nên khó có thể tận dụng tối đa khả năng tính toán song song.</d-footnote>.</p>
+
+<p align="center">
+  <img src="/assets/img/00.png" alt="Place holder image" />
+</p>
+
+<p>Trong bối cảnh đó, Transformer<d-cite key="vaswani2017attention"></d-cite> ra đời với mục tiêu giải quyết hai vấn đề nêu trên của mạng hồi quy và tạo một bước đột phá mới trong lĩnh vực xử lý ngôn ngữ tự nhiên. Kiến trúc Transformer được hình thành bởi nhiều lớp (multi-head) self-attention layer theo sau bởi <em>Point-wise Feed Forward Network</em>. Trong mô hình mạng dạng này, thông tin về vị trí và thứ tự của từng thành phần dữ liệu thường được tích hợp vào input trước khi đưa qua các layer biến đổi dữ liệu. Do đó, trong mô hình Transformer người ta thường sử dụng <em>positional encoding</em> để tích hợp vào trong input. Có rất nhiều công thức attention nhưng công thức được sử dụng trong Transformer đó là <strong>Scale Dot-Product</strong>. Công thức này lấy cảm hứng từ phép truy vấn cơ sở dữ liệu nên được mô tả như sau:</p>
+
+\[\text{Attention}(Q, K, V) = \text{softmax}(\frac{QK^T}{\sqrt{d_k}})V\]
+
+<p>Trong đó:</p>
+<ul>
+  <li>$Q, K$: Lần lượt là vector query và vector key ($|Q|=|K|=d_k$).</li>
+  <li>$V$: Vector value ($|V|=d_v$)</li>
+</ul>
+
+<p>Giả sử ta có vector embedding $x$ đã bao gồm thông tin về vị trí (positional encoding), để có được 3 vector $Q, K, V$ ta cần lấy $x$ nhân lần lượt với 3 ma trận $W^Q, W^K, W^V$. Đây chính là 3 ma trận tham số cần học được của Self-Attention trong mô hình Transformer. Vì vậy công thức trên có thể viết lại thành:</p>
+
+\[\text{Attention}(x) = \text{softmax}(\frac{xW^Q(xW^K)^T}{\sqrt{d_k}})xW^V\]
+
+<h2 id="lambda-networks">Lambda Networks</h2>
+
+      </d-article>
+      
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
+
+      <d-article>
+      
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname  = 'vndee';
+          var disqus_identifier = '/blog/2020/lambdanetworks';
+          var disqus_title      = "Lambda Networks";
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </d-article>
+      
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0" style="text-align: center;">
+    &copy; Copyright 2021 Huỳnh Văn Duy.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+    Last updated: June 27, 2021.
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <d-bibliography src="/assets/bibliography/2020-10-26-lambdanetworks.bib">
+  </d-bibliography>
+
+</html>
